@@ -1,0 +1,1 @@
+This Easy Query project
