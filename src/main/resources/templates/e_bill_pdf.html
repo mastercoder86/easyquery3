@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<!-- Basic -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!-- Mobile Metas -->
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />-->
+	<meta name="viewport" content="height=device-height, 
+                      width=device-width, initial-scale=1.0, 
+                      minimum-scale=1.0, maximum-scale=1.0, 
+                      user-scalable=no, target-densitydpi=device-dpi" />
+	<!-- Site Metas -->
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<link rel="shortcut icon" th:href="@{/images/google_logo.png}" type="image/x-icon">
+	<link rel="icon" th:href="@{/images/google_logo.png}" type="image/x-icon">
+	<!-- bootstrap core css -->
+	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style1.css}" />
+	<title>
+		Easy Query
+	</title>
+</head>
+
+<body>
+	<input type="hidden" id="bill_generated" th:if="${bill_generated}" />
+
+	<div class="main_container1">
+		<div class="container sub_container">
+			<div class="logo_container text-center">
+				<img src="/images/easy_query.jpg" class="logo9" />
+			</div>
+			<hr />
+			<div class="company_address">
+				<h3>Easy Query</h3>
+				<span>Narengi,Tinali,</span><br />
+				<span>Guwahati,Assam</span><br />
+				<span>Phone : +91 7896927729</span>
+			</div>
+
+
+
+
+		</div>
+		<div class="invoice_details">
+
+			<table class="table inv_table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Invoice #</th>
+						<th scope="col">Date</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+
+						<td th:text="${invoice_no}">Otto</td>
+						<td th:text="${date}">@mdo</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+		<div class="container">
+			<div class="bill_to">
+				<h4>Bill To</h4>
+
+			</div>
+			<div class="billing_to">
+				<span th:text="${seller.name}">Name</span><br />
+				<span th:text="${seller.bussinessName}">Company Name</span><br />
+				<span th:text="${seller.street1}">Address</span><br />
+				<span th:text="${seller.phone}">Phone</span><br />
+				<span th:text="${seller.email}">email</span><br />
+			</div>
+
+		</div>
+		<div class="container">
+			<table class="table desc_table">
+				<thead class="thead-dark">
+					<tr>
+						<th class="th_desc" scope="col">Description</th>
+						<th scope="th_amount">Amount</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tr_desc">
+
+						<td>Regsitration Fees</td>
+						<td>Rs.999/-</td>
+					</tr>
+					<tr class="tr_total">
+
+						<td class="td_thanks text-center">Thank you for regsitration !</td>
+						<td class="td_total">
+							<h6>Total : Rs.999/-</h6>
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+		<p class="text-center p_thanks">If you have any question about this invoice,please contact :</p>
+		<div class="container bottom_address">
+			<h5>Easy Query</h5>
+			<span>Narengi,Tinali,Guwahati,Assam</span>
+			<br />
+			<span>+91 7896927729</span>
+			<br />
+			<span>easyquery1@gmail.com</span>
+		</div>
+
+	</div>
+
+	<div class="container mt-2">
+		<!--<div class="row">
+			<divbutton class="col-6 back_bill">Back</divbutton>
+			<div class="col-6 Download_bill">Download</div>
+		</div>-->
+
+		<script th:src="@{/js/jquery-3.4.1.min.js}"></script>
+		<script th:src="@{/js/bootstrap.js}"></script>
+		<script th:src="@{/js/myscript.js}"></script>
+</body>
+
+</html>
